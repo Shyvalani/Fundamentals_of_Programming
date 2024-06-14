@@ -1,0 +1,161 @@
+string:
+    sequence of chars ends with null char \0
+    "Null-terminated byte strings"
+
+    to declare the string:
+        - char array is the string 
+        char text[1024]; // text is the string 
+
+    char 'X' '9' '0' 'b'
+    "Hello C Students"
+
+string/char functions     
+    char functions 
+-----------------------------------
+Character classification
+-----------------------------------
+Defined in header <ctype.h>
+isalnum
+ 
+checks if a character is alphanumeric
+(function)
+isalpha
+ 
+checks if a character is alphabetic
+(function)
+islower
+ 
+checks if a character is lowercase
+(function)
+isupper
+ 
+checks if a character is an uppercase character
+(function)
+isdigit
+ 
+checks if a character is a digit
+(function)
+isxdigit
+ 
+checks if a character is a hexadecimal character
+(function)
+iscntrl
+ 
+checks if a character is a control character
+(function)
+isgraph
+ 
+checks if a character is a graphical character
+(function)
+isspace
+ 
+checks if a character is a space character
+(function)
+isblank
+  
+(C99)
+ 
+checks if a character is a blank character
+(function)
+isprint
+ 
+checks if a character is a printing character
+(function)
+ispunct
+ 
+checks if a character is a punctuation character
+(function)
+-----------------------------------
+
+
+-----------------------------------
+Character manipulation
+-----------------------------------
+tolower
+ 
+converts a character to lowercase
+(function)
+toupper
+ 
+converts a character to uppercase
+(function)
+-----------------------------------
+
+-----------------------------------
+    string functions 
+-----------------------------------
+#
+strcpy(dest, source) - copies one string to another
+char s1[255] = "Ritchie";
+char s2[255];
+strcpy(s2,s1); // s1="Ritchie" is copied to s2.
+
+
+#
+concatenates two strings
+strcat(source,dest)
+char s1[255] = "Dennis ";
+char s2[255] = "Ritchie";
+strcat(s1,s2); //s1="Dennis Ritchie", s2="Ritchie"
+
+#  
+returns the length of a given string
+strlen(str) //
+
+#compares two strings
+strcmp(s1,s2); s1<s2 -1,s1>s2 +1,s1==s2 0
+char s1[255] = "Amogha";
+char s2[255] = "Krishna";
+strcmp(s1,s2) -> -1
+
+char s1[255] = "Krishna";
+char s2[255] = "Amogha";
+strcmp(s1,s2) -> +1
+
+char s1[255] = "Amogha";
+char s2[255] = "Amogha";
+strcmp(s1,s2) -> 0
+
+#
+finds the first occurrence of a character
+strchr(str,ch)
+char s1[255] = "Amogha";
+char* s2 = strchr(s1,'g'); //addr at 'g' in s1
+printf("%s",s2);//gha
+
+#
+strstr
+finds the first occurrence of a substring of characters
+
+#
+finds the next token in a byte string
+strtok
+
+tokenizer 
+
+    - to extract words 
+    - to extract chars chunks
+
+char name[255] = "Sannidhi is coming from Karkala";
+char separator[20] = " "; //" ,&.;"
+char* word = strtok(name,separator);
+printf("%s\n",word); //Sannidhi
+word = strtok(NULL,separator);//is
+printf("%s\n",word);
+word = strtok(NULL,separator);//coming 
+printf("%s\n",word);
+....
+-----------------------------------
+
+
+
+-----------------------------------
+Q: 
+   read a string, 
+   find 
+        number of digits,
+                  alphabets,
+                  capital letters,
+                  small letters, 
+                  alpha numeric letters 
+-----------------------------------
